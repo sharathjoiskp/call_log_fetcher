@@ -1,17 +1,26 @@
 name: call_log_fetcher
-description: "A Flutter plugin project for fetching call logs from the android device "
-version: 0.0.1
-homepage:
+description: Fetch Android call logs within a specified date range. Intended for enterprise and internal applications.
+version: 0.1.0
+
+homepage: https://github.com/sharathjoiskp/call_log_fetcher
+repository: https://github.com/sharathjoiskp/call_log_fetcher
+issue_tracker: https://github.com/sharathjoiskp/call_log_fetcher/issues
+
+topics:
+  - android
+  - call-log
+  - enterprise
+  - crm
 
 environment:
   sdk: ^3.11.0
-  flutter: '>=3.3.0'
+  flutter: ">=3.3.0"
 
 dependencies:
   flutter:
     sdk: flutter
   permission_handler: ^12.0.1
-  plugin_platform_interface: ^2.0.2
+  plugin_platform_interface: ^2.1.8
 
 dev_dependencies:
   flutter_test:
@@ -19,7 +28,6 @@ dev_dependencies:
   flutter_lints: ^6.0.0
 
 flutter:
-
   plugin:
     platforms:
       android:
