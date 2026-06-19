@@ -1,6 +1,6 @@
 name: call_log_fetcher
 description: Fetch Android call logs within a specified date range. Intended for enterprise and internal applications.
-version: 0.1.0
+version: 0.0.1
 
 homepage: https://github.com/sharathjoiskp/call_log_fetcher
 repository: https://github.com/sharathjoiskp/call_log_fetcher
