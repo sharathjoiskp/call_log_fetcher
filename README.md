@@ -2,7 +2,11 @@
 
 A Flutter plugin for fetching Android call logs within a specified date range.
 
-This plugin is designed primarily for **enterprise and internal applications**, such as:
+This plugin is designed primarily for **enterprise and internal applications**.
+
+## Intended Use
+
+Typical use cases include:
 
 * CRM synchronization
 * Field sales tracking
@@ -18,26 +22,24 @@ This plugin is designed primarily for **enterprise and internal applications**, 
 
 ## Important Notice
 
-This plugin requires the `READ_CALL_LOG` permission.
+This plugin requires access to Android call logs through the `READ_CALL_LOG` permission.
 
-Access to Android call logs is considered sensitive and may be restricted by distribution platforms such as Google Play.
+Access to call logs is considered sensitive and may be restricted by app distribution platforms such as Google Play.
 
-Before using this plugin, ensure that your application complies with all applicable platform policies and legal requirements.
+Developers using this plugin are responsible for ensuring compliance with:
 
-Developers are solely responsible for:
-
-* Obtaining user consent where required
-* Complying with Google Play policies
-* Complying with local privacy regulations
-* Ensuring appropriate use of call log data
+* Google Play policies
+* Local privacy regulations
+* User consent requirements
+* Applicable laws and regulations
 
 ## Features
 
 * Fetch call logs within a specified date range
-* Explicit permission handling in Flutter
+* Flutter-based permission handling
 * Typed Dart models
 * Structured exception handling
-* Android-native querying for efficient filtering
+* Native Android querying for efficient filtering
 
 ## Installation
 
@@ -45,10 +47,10 @@ Add the dependency to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  call_log_fetcher: ^0.0.1
+  call_log_fetcher: ^0.1.0
 ```
 
-Run:
+Then run:
 
 ```bash
 flutter pub get
@@ -97,7 +99,7 @@ try {
 }
 ```
 
-## Data Model
+## Data Models
 
 ### CallLogQuery
 
@@ -126,9 +128,7 @@ Supported values:
 
 ## Error Handling
 
-The plugin throws `CallLogException` for all expected failures.
-
-Example:
+The plugin throws `CallLogException` for expected failures.
 
 ```dart
 try {
@@ -158,9 +158,7 @@ try {
 | `INVALID_DATE_RANGE` | The `from` date occurs after the `to` date |
 | `UNKNOWN_ERROR`      | Unexpected error                           |
 
-## How It Works
-
-Responsibilities are intentionally separated:
+## Architecture
 
 ### Flutter Layer
 
@@ -178,10 +176,13 @@ Responsibilities are intentionally separated:
 ## Limitations
 
 * Android only
+* Intended for enterprise and internal applications
+* Requires `READ_CALL_LOG` permission
+* OEM implementations may vary
+* Access to call logs may be restricted by Google Play policies
 * No background synchronization
 * No pagination
 * No streaming support
-* OEM implementations may vary
 
 ## Example Application
 
@@ -198,3 +199,7 @@ flutter run
 ## Contributing
 
 Issues and pull requests are welcome.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
