@@ -1,3 +1,5 @@
-## 0.1.0
+## 0.1.1
 
-* TODO: Describe initial release.
+- Added Dart API documentation comments
+- Improved package documentation coverage
+- Enabled `public_member_api_docs` lint

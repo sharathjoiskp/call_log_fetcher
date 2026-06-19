@@ -3,6 +3,7 @@ import 'package:call_log_fetcher/call_log_fetcher_platform_interface.dart';
 import 'package:call_log_fetcher/model/call_log_entry.dart';
 import 'package:call_log_fetcher/model/call_log_query.dart';
 import 'package:flutter/services.dart';
+/// A method channel implementation of the CallLogFetcherPlatform.
 
 class MethodChannelCallLogFetcher extends CallLogFetcherPlatform {
   static const MethodChannel _channel = MethodChannel('com.jois.app/platfroms');
