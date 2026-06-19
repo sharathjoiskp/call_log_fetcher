@@ -1,0 +1,24 @@
+name: call_log_fetcher_example
+description: Example app for the call_log_fetcher plugin.
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  call_log_fetcher:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
